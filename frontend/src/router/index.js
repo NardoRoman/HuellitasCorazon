@@ -15,6 +15,10 @@ import Profile from '../views/Profile.vue'
 
 const routes = [
   { 
+    path: '/HuellitasCorazon/', 
+    redirect: '/'
+  },
+  { 
     path: '/', 
     component: Home 
   },
@@ -53,7 +57,7 @@ const routes = [
     component: AdoptionProcess,
     beforeEnter: authGuard // Cualquier usuario autenticado
   },
-    { 
+  { 
     path: '/profile', 
     component: Profile,
     beforeEnter: userGuard // Solo usuarios normales
@@ -61,7 +65,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/HuellitasCorazon/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

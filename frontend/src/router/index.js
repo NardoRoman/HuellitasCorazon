@@ -15,6 +15,10 @@ import Profile from '../views/Profile.vue'
 
 const routes = [
   { 
+    path: '/HuellitasCorazon/', 
+    redirect: '/'
+  },
+  { 
     path: '/', 
     component: Home 
   },
@@ -53,7 +57,7 @@ const routes = [
     component: AdoptionProcess,
     beforeEnter: authGuard // Cualquier usuario autenticado
   },
-    { 
+  { 
     path: '/profile', 
     component: Profile,
     beforeEnter: userGuard // Solo usuarios normales

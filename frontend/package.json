@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && npx gh-pages -d dist --repo https://github.com/NardoRoman/HuellitasCorazon.git --dotfiles"
+    "deploy": "vite build && (Get-Content dist/index.html) -replace 'src=\"/assets/', 'src=\"/HuellitasCorazon/assets/' -replace 'href=\"/assets/', 'href=\"/HuellitasCorazon/assets/' | Set-Content dist/index.html && gh-pages -d dist"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",

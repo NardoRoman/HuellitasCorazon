@@ -5,6 +5,7 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  base: '/HuellitasCorazon/', // ← LINEA NUEVA IMPORTANTE
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src') // Definimos el alias '@' para que apunte a la carpeta 'src'

@@ -7,7 +7,8 @@ export default defineConfig({
   base: '/HuellitasCorazon/',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': path.resolve(__dirname, './src'),
+      '/img': path.resolve(__dirname, './public/img') // ← NUEVO ALIAS
     }
   }
 })

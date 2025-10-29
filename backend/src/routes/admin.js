@@ -1,15 +1,9 @@
 import express from 'express';
-import vision from '@google-cloud/vision';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { createVisionClient } from '../config/vision-config.js'; // ← CAMBIAR
 import Pet from '../models/Pet.js';
 import { protect } from '../middleware/auth.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const client = new vision.ImageAnnotatorClient({
-  keyFilename: path.join(__dirname, '../config/google-credentials.json')
-});
+const client = createVisionClient(); // ← CAMBIAR
 
 const router = express.Router();
 

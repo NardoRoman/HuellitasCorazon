@@ -7,11 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-<<<<<<< HEAD
-    "deploy": "vite build && gh-pages -d dist" 
-=======
-    "deploy": "vite build && (Get-Content dist/index.html) -replace 'src=\"/assets/', 'src=\"/HuellitasCorazon/assets/' -replace 'href=\"/assets/', 'href=\"/HuellitasCorazon/assets/' | Set-Content dist/index.html && gh-pages -d dist"
->>>>>>> f5c0b2a83b7502eccbbbaec3e085d1747572ba8d
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
@@ -26,12 +22,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
-<<<<<<< HEAD
     "gh-pages": "^6.3.0",
     "vite": "^7.1.7"
-=======
-    "vite": "^7.1.7",
-    "gh-pages": "^6.0.0" 
->>>>>>> f5c0b2a83b7502eccbbbaec3e085d1747572ba8d
   }
 }
